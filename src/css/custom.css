@@ -13,11 +13,8 @@
   --ifm-color-primary-light: #3671e6;
   --ifm-color-primary-lighter: #4f83e9;
   --ifm-color-primary-lightest: #5991ff;
+  --ifm-background-color: white;
   --ifm-code-font-size: 95%;
-}
-
-.button.button--outline:not(.button--active):not(:hover) {
-  --ifm-font-base-color: #ebedf0;
 }
 
 .footer {
@@ -33,4 +30,12 @@
   display: block;
   margin: 0 calc(-1 * var(--ifm-pre-padding));
   padding: 0 var(--ifm-pre-padding);
+}
+
+.admonition-info .admonition-content a {
+  display: inline-block;
+  background: var(--ifm-code-background);
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-right: 2px;
 }
