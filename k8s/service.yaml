@@ -1,0 +1,14 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: cluster-guide
+  labels:
+    app.kubernetes.io/name: cluster-guide-service
+    app.kubernetes.io/part-of: cluster-guide
+spec:
+  ports:
+    - port: 80
+  selector:
+    app.kubernetes.io/name: cluster-guide-pod
+    app.kubernetes.io/part-of: cluster-guide

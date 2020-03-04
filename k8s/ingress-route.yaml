@@ -1,0 +1,39 @@
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: cluster-guide-http
+  labels:
+    app.kubernetes.io/name: cluster-guide-http
+    app.kubernetes.io/part-of: cluster-guide
+spec:
+  entryPoints:
+    - http
+  routes:
+    - kind: Rule
+      match: Host(`cluster.guide`)
+      services:
+        - name: cluster-guide
+          port: 80
+      middlewares:
+        - name: redirect-to-https
+          namespace: traefik
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: cluster-guide-https
+  labels:
+    app.kubernetes.io/name: cluster-guide-https
+    app.kubernetes.io/part-of: cluster-guide
+spec:
+  tls:
+    secretName: cluster-guide-tls
+  entryPoints:
+    - https
+  routes:
+    - kind: Rule
+      match: Host(`cluster.guide`)
+      services:
+        - name: cluster-guide
+          port: 80
