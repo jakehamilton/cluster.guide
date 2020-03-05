@@ -12,22 +12,26 @@ function Home() {
   return (
     <Layout
       title={`Hello from ${siteConfig.title}`}
-      description="Learn to create your own automated Kubernetes cluster.">
-      <header className={classnames('hero hero--primary', styles.heroBanner)}>
+      description="Learn to create your own automated Kubernetes cluster."
+    >
+      <header className={classnames("hero hero--primary", styles.heroBanner)}>
         <div className="container">
           <div className={styles.heroLogo}>
-            <img src={useBaseUrl('/img/cluster.guide.png')} />
+            <img src={useBaseUrl("/img/cluster.guide.png")} />
             <span className={styles.logoRibbon}>Beta</span>
           </div>
-          <h1 className="hero__title">{siteConfig.title}</h1>
+          <h1 className={classnames("hero__title", styles.heroTitle)}>
+            <span>cluster</span><span>.guide</span>
+          </h1>
           <p className="hero__subtitle">{siteConfig.tagline}</p>
           <div className={styles.buttons}>
             <Link
               className={classnames(
-                'button button--outline button--secondary button--lg',
-                styles.getStarted,
+                "button button--outline button--secondary button--lg",
+                styles.getStarted
               )}
-              to={useBaseUrl('docs/getting-started/')}>
+              to={useBaseUrl("docs/getting-started/")}
+            >
               Get Started
             </Link>
           </div>
