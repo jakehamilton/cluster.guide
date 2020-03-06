@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
       - name: cluster-guide
-        image: harbor.intergalactic.dev/simple/cluster.guide
+        image: harbor.intergalactic.dev/simple/cluster.guide:0.0.1
         imagePullPolicy: Always
         resources:
           limits:
