@@ -9,14 +9,14 @@ To create the cluster, navigate to [https://cloud.digitalocean.com](https://clou
 and select the `Create` dropdown, then choose `Clusters`.
 
 
-![Select the "Create" dropdown](./assets/digitalocean-step-1.png)
+![Select the "Create" dropdown](/img/getting-started/digitalocean-step-1.png)
 
-![Select "Clusters"](./assets/digitalocean-step-2.png)
+![Select "Clusters"](/img/getting-started/digitalocean-step-2.png)
 
 Now, select a datacenter where you would like your traffic served from and add a new node pool.
 It can be a good idea to name your node pool something meaningful (eg. the size of the nodes).
 
-![Create a node pool and name the cluster](./assets/digitalocean-step-3.png)
+![Create a node pool and name the cluster](/img/getting-started/digitalocean-step-3.png)
 
 Finally, select "Download Config File" and follow the given instructions to download it. Move this
 file to `~/.kube/config` (renaming the file to `config`). You may need to create the `.kube` directory

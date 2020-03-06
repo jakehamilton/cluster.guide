@@ -1,5 +1,7 @@
 FROM node:latest as base
 
+MAINTAINER Jake Hamilton <jake@intergalactic.email>
+
 COPY ./package.json /tmp/package.json
 COPY ./yarn.lock /tmp/yarn.lock
 
