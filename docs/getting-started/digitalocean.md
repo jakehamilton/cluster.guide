@@ -3,7 +3,7 @@ id: digitalocean
 title: Digital Ocean
 ---
 
-# Create A New Cluster
+## Create A New Cluster
 
 To create the cluster, navigate to [https://cloud.digitalocean.com](https://cloud.digitalocean.com)
 and select the `Create` dropdown, then choose `Clusters`.

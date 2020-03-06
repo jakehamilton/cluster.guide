@@ -18,6 +18,11 @@ module.exports = {
           to: "docs/getting-started",
           label: "Getting Started",
           position: "left"
+        },
+        {
+          to: "docs/faq",
+          label: "FAQ",
+          position: "left"
         }
       ]
     },
